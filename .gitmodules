@@ -1,0 +1,6 @@
+[submodule "roles/osct.tomcat-8"]
+	path = roles/osct.tomcat-8
+	url = git@github.com:osct/tomcat-8.git
+[submodule "roles/osct.shibboleth-idp-v3"]
+	path = roles/osct.shibboleth-idp-v3
+	url = git@github.com:osct/shibboleth-idp-v3.git

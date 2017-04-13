@@ -1,0 +1,5 @@
+[ldap-servers]
+idpopen ansible_host=193.206.106.112
+
+[shibboleth-idps]
+idpopen ansible_host=193.206.106.112

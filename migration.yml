@@ -1,0 +1,5 @@
+---
+- name: Deploy Shibboleth IdP and Web Interface
+  hosts: shibboleth-idps
+  roles:
+    - { role: osct.shibboleth-idp-v3, tags: "shibboleth-idp" }

@@ -1,0 +1,48 @@
+---
+
+ansible_user: '{{ vault_ansible_user }}'
+ansible_become_pass: '{{ vault_ansible_become_pass }}'
+tomcat_default_port: 80
+tomcat_default_port_ssl: 443
+keystore: /home/marco/Documents/HOSTCerts/idpopen/idpopen.jks
+idp_authn_LDAP_ldapURL: 'ldap://localhost:389'
+idp_authn_LDAP_baseDN: 'ou=People,dc=local'
+idp_authn_LDAP_userFilter: '(cn={user})'
+idp_authn_LDAP_bindDN: '{{ vault_idp_authn_LDAP_bindDN }}'
+idp_authn_LDAP_bindDNCredential: '{{ vault_idp_authn_LDAP_bindDNCredential }}'
+idp_authn_LDAP_dnFormat: 'cn=%s,ou=People,dc=local'
+idp_attribute_resolver_LDAP_searchFilter: '(cn=$resolutionContext.principal)'
+idp_attribute_resolver_LDAP_returnAttributes: ''
+
+# Enable the release of a persistent identifier
+idp_attribute_persistent_id: True
+
+# Enable SLO
+idp_session_trackSPSessions: True
+idp_session_secondaryIndex: True
+idp_storage_html_local: True
+idp_logout_elaboration: True
+
+idp_attributes_scope: 'ct.infn.it'
+
+# Salt for the persistent Id
+idp_persistentId_salt: '{{ vault_idp_persistentId_salt }}'
+
+metadataproviders:
+  - name: 'GrIDP-Test'
+    url: 'https://gridp.garr.it/metadata/gridp-test.xml'
+  - name: 'GrIDP'
+    url: 'https://gridp.garr.it/metadata/gridp.xml'
+    certificate:
+      url: 'https://gridp.garr.it/metadata/gridp.pem'
+  - name: 'sifulan'
+    url: 'https://sifulan.my/metadata/metadata.xml'
+    certificate:
+      path: 'files/sifulan-signer.der'
+
+
+# Templating
+idp_custom_images_path: 'files/images/'
+idp_custom_css_path: 'files/css/'
+idp_custom_templates_path: 'files/view/'
+idp_custom_messages_path: 'files/messages.properties'
