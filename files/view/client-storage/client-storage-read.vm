@@ -41,13 +41,16 @@
                     $springMacroRequestContext.getMessage("idp.client-storage.no-js", "Since your browser does not support JavaScript, you must press the Continue button once to proceed.")
                     </div>
                 </noscript>
-                #parse( "client-storage/read.vm" )
+              #parse( "client-storage/read.vm" )
             </div>
             <footer>
-                <div class="container container-footer">
-                    <p class="footer-text">#springMessageText("idp.footer", "Insert your footer text here.")</p>
-                </div>
+              <div class="container container-footer">
+                <p class="footer-text">#springMessageText("idp.footer.maintained", "Insert your footer text here.")</p>
+                <p class="footer-text">#springMessageText("idp.footer.hosted", "Insert your footer text here.")</p>
+                <p class="footer-text">#springMessageText("idp.footer.powered", "Insert your footer text here.")</p>
+              </div>
             </footer>
+
         </div>
     </body>
 </html>

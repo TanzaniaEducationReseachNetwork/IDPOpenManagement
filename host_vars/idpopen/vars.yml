@@ -4,6 +4,7 @@ ansible_user: '{{ vault_ansible_user }}'
 ansible_become_pass: '{{ vault_ansible_become_pass }}'
 tomcat_default_port: 80
 tomcat_default_port_ssl: 443
+tomcat_memory_size: 2048m
 keystore: /home/marco/Documents/HOSTCerts/idpopen/idpopen.jks
 idp_authn_LDAP_ldapURL: 'ldap://localhost:389'
 idp_authn_LDAP_baseDN: 'ou=People,dc=local'
@@ -20,7 +21,7 @@ idp_attribute_persistent_id: True
 # Enable SLO
 idp_session_trackSPSessions: True
 idp_session_secondaryIndex: True
-idp_storage_html_local: True
+idp_storage_html_local: False
 idp_logout_elaboration: True
 
 idp_attributes_scope: 'ct.infn.it'

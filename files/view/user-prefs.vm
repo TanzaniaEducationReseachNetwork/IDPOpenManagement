@@ -36,7 +36,7 @@
             $springMacroRequestContext.getMessage("idp.userprefs.no-js", "This feature requires Javascript.")
           </div>
         </noscript>
-        
+
         <div id="content" class="content" style="display:none">
           <div class="form-element-wrapper">
           <h4>#springMessageText("idp.userprefs.options", "The following options are available:")</h4>
@@ -51,10 +51,12 @@
 
       <footer>
         <div class="container container-footer">
-          <p class="footer-text">#springMessageText("idp.footer", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.maintained", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.hosted", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.powered", "Insert your footer text here.")</p>
         </div>
       </footer>
-    </div>
-    
+
+
  	</body>
 </html>

@@ -20,7 +20,7 @@
     <title>#springMessageText("idp.title", "Web Login Sevice") - #springMessageText("${eventKey}.title", "Error")</title>
     <link rel="stylesheet" type="text/css" href="$request.getContextPath()/css/main.css">
   </head>
-  
+
   <body onload="window.location = '$errorUrl'">
     <div class="wrapper">
       <div class="container">
@@ -28,7 +28,7 @@
           <img src="$request.getContextPath()#springMessage("idp.logo")" alt="#springMessageText("idp.logo.alt-text", "logo")">
           <h3>#springMessageText("idp.title", "Web Login Sevice") - #springMessage("idp.title.suffix", "Error")</h3>
         </header>
-                
+
         <div class="content">
           #springMessageText("${eventKey}.message", "Your web browser doesn't support authentication with your desktop login credentials.")
           <ul class="list list-help">
@@ -41,9 +41,12 @@
 
       <footer>
         <div class="container container-footer">
-          <p class="footer-text">#springMessageText("idp.footer", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.maintained", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.hosted", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.powered", "Insert your footer text here.")</p>
         </div>
       </footer>
+
     </div>
   </body>
 </html>

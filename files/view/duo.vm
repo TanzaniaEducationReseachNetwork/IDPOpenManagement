@@ -44,10 +44,10 @@
 
         <div class="content">
           <div class="column one">
-          
+
             <h3>#springMessageText("idp.login.duoRequired", "Authentication with Duo is required for the requested service.")</h3>
 
-            <noscript>#springMessageText("idp.login.duoNoScript", "The Duo service requires JavaScript.")</noscript>          
+            <noscript>#springMessageText("idp.login.duoNoScript", "The Duo service requires JavaScript.")</noscript>
             <script src="$request.getContextPath()$duoScriptPath"></script>
             <iframe id="duo_iframe"
                 data-host="$duoHost"
@@ -60,7 +60,7 @@
                 <input type="hidden" name="_eventId" value="proceed" />
 
             </form>
-            
+
             <h3 style="text-align: center">
                 <a href="$flowExecutionUrl&_eventId=cancel">#springMessageText("idp.login.duoCancel", "Cancel this Request")</a>
             </h3>
@@ -75,7 +75,9 @@
 
       <footer>
         <div class="container container-footer">
-          <p class="footer-text">#springMessageText("idp.footer", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.maintained", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.hosted", "Insert your footer text here.")</p>
+          <p class="footer-text">#springMessageText("idp.footer.powered", "Insert your footer text here.")</p>
         </div>
       </footer>
     </div>

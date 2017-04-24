@@ -58,10 +58,13 @@
                 <div style="clear:both;"></div>
             </div>
             <footer>
-                <div class="container container-footer">
-                    <p class="footer-text">#springMessageText("idp.footer", "Insert your footer text here.")</p>
-                </div>
+              <div class="container container-footer">
+                <p class="footer-text">#springMessageText("idp.footer.maintained", "Insert your footer text here.")</p>
+                <p class="footer-text">#springMessageText("idp.footer.hosted", "Insert your footer text here.")</p>
+                <p class="footer-text">#springMessageText("idp.footer.powered", "Insert your footer text here.")</p>
+              </div>
             </footer>
+
         </div>
     </body>
 </html>
