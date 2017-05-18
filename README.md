@@ -6,8 +6,8 @@ It contains:
 
 1. An example playbook `migration.yml`
 2. Two roles as submodules
-  * `roles/osct.shiboleth-idp-v3` for the shibboleth-3 configuraiton
-  * `roles/osct.tomcat-8` for the tomcat layer configuration.
+   * `roles/osct.shiboleth-idp-v3` for the shibboleth-3 configuraiton
+   * `roles/osct.tomcat-8` for the tomcat layer configuration.
 3. An example inventory `inventory.hosts`
 4. Supporting files (images, stylesheets) in `files`
 
@@ -30,8 +30,8 @@ If you want to deploy a Shibboleth-3 Identity Provider in a Federation, take the
 3. Install the Ansible roles from [Galaxy](https://galaxy.ansible.com) : `ansible-galaxy install -p roles/ osct.shibboleth-idp-v3` (assuming that your roles are in `roles` subdirectory.)
 5. Prepare your inventory (see `inventory.hosts` for an example). Note : you can add a `idpv3` group and add the variables from `host_vars` to `group_vars/idpv3.yml`. See variables section below.
 6. Update the inventory variables (group, or host variables), and the variables  in the roles (see variables section below):
-  1. `roles/osct.shibboleth-idp-v3/[vars,default]/main.yml`
-  2. `roles/osct.tomcat-8/[vars,default]/main.yml`
+   1. `roles/osct.shibboleth-idp-v3/[vars,default]/main.yml`
+   2. `roles/osct.tomcat-8/[vars,default]/main.yml`
 7. Run your playbook : `ansible-playbook my-migration.yml`
 
 # Support and Feedback.
