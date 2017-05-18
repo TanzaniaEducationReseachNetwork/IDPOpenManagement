@@ -1,6 +1,6 @@
 # IDPOpen Management (for Shibboleth 3)
 
-This repository contains a demonstrative [Ansible](www.ansible.com) playbook for migrating legacy Shibboleth-2 identity providers to Shibboleth-3.  
+This repository contains an [Ansible](www.ansible.com) playbook for installing a SAML identity providers based on Shibboleth-3.  
 
 It contains :
 
@@ -15,7 +15,7 @@ It contains :
 # How to use this repository
 
 ----
-Short answer : _don't_. This repository was created just to test the two roles :smile:
+Short answer : _don't_. This repository was created just to install a server with the two roles :smile:
 
 ----
 
@@ -30,10 +30,10 @@ If you want to deploy a Shibboleth-3 Identity Provider in a Federation, take the
   3. Install the Ansible roles from [Galaxy](https://galaxy.ansible.com) : `ansible-galaxy install -p roles/ osct.shibboleth-idp-v3` (assuming that your roles are in `roles` subdirectory.)
   5. Prepare your inventory (see `inventory.hosts` for an example). Note : you can add a `idpv3` group and add the variables from `host_vars` to `group_vars/idpv3.yml`. See variables section below.
   6. Update the inventory variables (group, or host variables), and the variables  in the roles (see variables section below) :
-    7. `roles/osct.shibboleth-idp-v3/[vars,default]/main.yml`
-    8. `roles/osct.tomcat-8/[vars,default]/main.yml`
+    - `roles/osct.shibboleth-idp-v3/[vars,default]/main.yml`
+    - `roles/osct.tomcat-8/[vars,default]/main.yml`
     See the respective `README.md`s of these roles for a description of the variables.
-  1. Run your playbook : `ansible-playbook my-migration.yml`
+  7. Run your playbook : `ansible-playbook my-migration.yml`
 
 # Support and Feedback.
 
